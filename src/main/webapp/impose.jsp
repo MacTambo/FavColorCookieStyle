@@ -18,13 +18,23 @@
 <form action="impose-servlet" method="post">
 Couleur 1
 <select name="couleur1">
-    <option value="noir">noir</option>
-    <option value="bleu">bleu</option>
+    <option value="black">black</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="purple">purple</option>
+    <option value="white">white</option>
+    <option value="yellow">yellow</option>
 </select>
 Couleur 2
 <select name="couleur2">
-    <option value="blanc">blanc</option>
-    <option value="bleu">jaune</option>
+    <option value="white">white</option>
+    <option value="yellow">yellow</option>
+    <option value="black">black</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="purple">purple</option>
 </select>
     <input type="submit" value="Let's go !">
 </form>

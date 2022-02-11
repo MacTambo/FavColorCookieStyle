@@ -20,15 +20,7 @@ p {
 .header {
     position:relative;
     text-align:center;
-    background: black;
     color:white;
-}
-.logo {
-    width:50px;
-    fill:white;
-    padding-right:15px;
-    display:inline-block;
-    vertical-align: middle;
 }
 
 .inner-header {

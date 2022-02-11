@@ -20,6 +20,10 @@ public class ImposeServlet extends HttpServlet {
 
         @Override
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                String background = request.getParameter("couleur1");
+                String waves = request.getParameter("couleur2");
+                request.setAttribute("background",background);
+                request.setAttribute("waves",waves);
                 request.getRequestDispatcher("tonStyle.jsp").forward(request,response);
         }
     }

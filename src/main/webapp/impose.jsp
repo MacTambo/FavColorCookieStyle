@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="impose.css">
     <title>Impose ton style !</title>
 </head>
-<body>
+<body style="background: ${background}" >
 <center>
 <h1>Impose ton style !</h1>
 
@@ -36,7 +36,7 @@ Couleur 2
     <option value="green">green</option>
     <option value="purple">purple</option>
 </select>
-    <input type="submit" value="Let's go !">
+    <input style="background: ${waves}" type="submit" value="Let's go !">
 </form>
 </center>
 </body>

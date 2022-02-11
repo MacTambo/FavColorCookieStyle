@@ -15,6 +15,29 @@ public class ImposeServlet extends HttpServlet {
 
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                Cookie[] cookies = request.getCookies();
+                String defaultbg = "black";
+                request.setAttribute("background", defaultbg);
+                if (cookies != null) {
+                        for (Cookie cookie : cookies) {
+                                if (cookie.getName().equals("background")) {
+                                        request.setAttribute("background", cookie.getValue());
+                                }
+
+                        }
+                }
+                if (cookies != null) {
+                        for (Cookie cookie : cookies) {
+                                if (cookie.getName().equals("waves")) {
+                                        request.setAttribute("waves", cookie.getValue());
+                                }
+                        }
+                }
+
+
+                System.out.println(cookies);
+
+
             request.getRequestDispatcher("impose.jsp").forward(request,response);
         }
 
@@ -24,6 +47,14 @@ public class ImposeServlet extends HttpServlet {
                 String waves = request.getParameter("couleur2");
                 request.setAttribute("background",background);
                 request.setAttribute("waves",waves);
+
+                Cookie cookieb = new Cookie("background", background);
+                Cookie cookiew = new Cookie("waves", waves);
+                cookieb.setMaxAge(30);
+                cookiew.setMaxAge(30);
+                response.addCookie(cookieb);
+                response.addCookie(cookiew);
+
                 request.getRequestDispatcher("tonStyle.jsp").forward(request,response);
         }
     }

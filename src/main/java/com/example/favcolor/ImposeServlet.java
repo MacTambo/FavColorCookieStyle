@@ -17,7 +17,10 @@ public class ImposeServlet extends HttpServlet {
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 Cookie[] cookies = request.getCookies();
                 String defaultbg = "black";
+                String defaultw = "black";
                 request.setAttribute("background", defaultbg);
+                request.setAttribute("waves", defaultw);
+
                 if (cookies != null) {
                         for (Cookie cookie : cookies) {
                                 if (cookie.getName().equals("background")) {
